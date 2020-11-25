@@ -1,12 +1,13 @@
 package stepDefinitions;
 
+import base.BaseTest;
 import common.Constant;
 import common.Log;
 import io.cucumber.java8.En;
 import org.testng.Assert;
 import pageObjects.RegisterPage;
 
-public class RegisterSteps implements En {
+public class RegisterSteps  implements En {
     private RegisterPage registerPage = new RegisterPage();
 
     public RegisterSteps(){

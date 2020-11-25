@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import base.BaseTest;
 import common.Constant;
 import common.Log;
 import io.cucumber.java8.En;
