@@ -13,7 +13,6 @@ public class LoginPage extends BasePage{
     private By loginButton = By.cssSelector(".LoginForm input[title='Login']");
     private By logOutTab = By.xpath("//div[@id='menu']/ul//span[.='Log out']");
     private By errorFormMessage = By.cssSelector("#content .message");
-    private String errorMessage = "//div[@id='content']/form//ol/li[@class='%s']/label[@class='validation-error']";
 
     //Element
     private WebElement getLoginButton() {
@@ -51,7 +50,7 @@ public class LoginPage extends BasePage{
     }
 
     public String errorFormMessage() {
-        return getText(DriverHelper.getWebDriver().findElement(errorFormMessage));
+        return getText(getErrorFormMessage());
     }
 
     /***
