@@ -24,5 +24,4 @@ public class BaseTest extends AbstractTestNGCucumberTests {
             DriverHelper.navigateToUrl(Constant.RAILWAY_URL);
         }
     }
-
 }

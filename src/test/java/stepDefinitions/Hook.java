@@ -1,14 +1,15 @@
 package stepDefinitions;
 
-import common.Constant;
 import helper.DriverHelper;
 import io.cucumber.java.After;
 
 public class Hook extends DriverHelper {
-    @After
-    public void closeBrowser() {
-        DriverHelper.closeWebDriver();
-    }
+//    @Before
+//    public void setUpBrowser() {
+//        DriverHelper.startBrowser(DriverHelper.DriverType.CHROME);
+//        DriverHelper.navigateToUrl(Constant.RAILWAY_URL);
+//
+//    }
 
     @After
     public void cleanUpAll() {

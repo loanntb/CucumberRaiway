@@ -1,6 +1,5 @@
 Feature: LoginFeature
 
-    @First
     Scenario Outline: Login with a username and an invalid password
         When Click Login tab
         When Login with Username "<username>" and Password "<password>"
@@ -11,7 +10,6 @@ Feature: LoginFeature
             | loan119044@gmail.com | 123456789 |
             | hello@gmail.com      | 123456789 |
 
-    @Second
     Scenario Outline: Login with invalid username and password
         When Click Login tab
         When Login with Username "<username>" and Password "<password>"
@@ -20,7 +18,6 @@ Feature: LoginFeature
             | username             | password  |
             | loan119044@gmail.com | wrongpassword |
 
-    @Third
     Scenario: Login with all blank username and password
         When Click Login tab
         When Login with Username "" and Password ""

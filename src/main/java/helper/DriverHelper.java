@@ -8,6 +8,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -15,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 public class DriverHelper {
 
-    private static WebDriver driver;
+    private static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
 
     public enum DriverType {
         CHROME, FIREFOX, EDGE;
@@ -29,35 +30,35 @@ public class DriverHelper {
         switch (type) {
             case CHROME:
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                drivers.set(new ChromeDriver());
                 break;
             case FIREFOX:
                 WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
+                drivers.set(new FirefoxDriver());
                 break;
             default:
                 WebDriverManager.edgedriver().setup();
-                driver = new EdgeDriver();
+                drivers.set(new EdgeDriver());
                 break;
         }
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Constant.TIME_OUT_SHORT, TimeUnit.SECONDS);
+
+        drivers.get().manage().window().maximize();
+        drivers.get().manage().timeouts().implicitlyWait(Constant.TIME_OUT_SHORT, TimeUnit.SECONDS);
     }
 
     /***
      * Navigate to base URL
      */
     public static void navigateToUrl(String url) {
-        driver.get(url);
+        drivers.get().get(url);
     }
 
     /***
      * Quit driver
      */
     public static void quitWebDriver() {
-        if (null != driver) {
-            driver.quit();
-            driver = null;
+        if (null != drivers) {
+            drivers.get().quit();
         }
     }
 
@@ -65,18 +66,17 @@ public class DriverHelper {
      * Close driver
      */
     public static void closeWebDriver() {
-        if (driver != null) {
-            driver.close();
-            driver = null;
+        if (drivers != null) {
+            drivers.get().close();
         }
     }
 
     /***
      * Get driver from outside
-     * @return : driver
+     * @return : drivers
      */
     public static WebDriver getWebDriver() {
-        return driver;
+        return drivers.get();
     }
 
     /***
@@ -84,7 +84,7 @@ public class DriverHelper {
      * @return
      */
     public static JavascriptExecutor initJs() {
-        return (JavascriptExecutor) driver;
+        return (JavascriptExecutor) drivers.get();
     }
 
     /***
@@ -97,7 +97,7 @@ public class DriverHelper {
 
     // Accepting javascript alert
     public static void alertAccept() {
-        Alert alert = driver.switchTo().alert();
+        Alert alert = drivers.get().switchTo().alert();
         alert.accept();
     }
 

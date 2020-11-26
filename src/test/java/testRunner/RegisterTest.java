@@ -1,13 +1,17 @@
 package testRunner;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-import io.cucumber.testng.AbstractTestNGCucumberTests;
-import org.junit.runner.RunWith;
+import base.BaseTest;
+import io.cucumber.testng.CucumberOptions;
+import org.testng.annotations.DataProvider;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(glue = "stepDefinitions",
-        features = {"src/test/java/features/Register.feature"}
+
+@CucumberOptions(features = {"src/test/java/features/Register.feature"},
+        glue = {"stepDefinitions"}
 )
-public class RegisterTest extends AbstractTestNGCucumberTests {
+public class RegisterTest extends BaseTest {
+    @Override
+    @DataProvider(parallel = true)
+    public Object[][] scenarios() {
+        return super.scenarios();
+    }
 }

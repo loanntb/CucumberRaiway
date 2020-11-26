@@ -5,4 +5,4 @@ Feature: RegisterFeature
         Then Getting an information register successfully message
         Examples:
             | email                   | password  | confirmPassword  | pid |
-            | abc4777755@gmail.com    | 123456789 | 123456789        |12345678|
+            | abc477556@gmail.com    | 123456789 | 123456789        |12345678|

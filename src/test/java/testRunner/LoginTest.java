@@ -2,7 +2,6 @@ package testRunner;
 
 import base.BaseTest;
 import io.cucumber.testng.CucumberOptions;
-import io.cucumber.testng.AbstractTestNGCucumberTests;
 import org.testng.annotations.DataProvider;
 
 
@@ -11,7 +10,7 @@ import org.testng.annotations.DataProvider;
 )
 public class LoginTest extends BaseTest {
     @Override
-    @DataProvider(parallel = false)
+    @DataProvider(parallel = true)
     public Object[][] scenarios() {
         return super.scenarios();
     }
