@@ -15,13 +15,10 @@ public class BaseTest extends AbstractTestNGCucumberTests {
     public void setUpBrowser(String browser) {
         if (CHROME.equals(browser)) {
             DriverHelper.startBrowser(DriverHelper.DriverType.CHROME);
-            DriverHelper.navigateToUrl(Constant.RAILWAY_URL);
         } else if (FIREFOX.equals(browser)) {
             DriverHelper.startBrowser(DriverHelper.DriverType.FIREFOX);
-            DriverHelper.navigateToUrl(Constant.RAILWAY_URL);
         } else {
             DriverHelper.startBrowser(DriverHelper.DriverType.EDGE);
-            DriverHelper.navigateToUrl(Constant.RAILWAY_URL);
         }
     }
 }

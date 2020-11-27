@@ -5,8 +5,8 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 
-@CucumberOptions(features = {"src/test/java/features/Register.feature"},
-        glue = {"stepDefinitions"}
+@CucumberOptions(features = {"src/test/resources/features/Register.feature"},
+        glue = {"stepDefinitions", "stepConfig"}
 )
 public class RegisterTest extends BaseTest {
     @Override

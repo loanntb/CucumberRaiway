@@ -7,7 +7,6 @@
             <class name="testRunner.LoginTest"/>
             <class name="testRunner.RegisterTest"/>
         </classes>
-
     </test> <!-- Test -->
 <!--    <test name="FirefoxTest">-->
 <!--        <parameter name="browser" value="firefox"/>-->
