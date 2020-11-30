@@ -21,5 +21,7 @@ Feature: LoginFeature
 
     Scenario: Login with all blank username and password
         When Login with username "" and password ""
-        Then The error messages "There was a problem with your login and/or errors exist in your form.", "You must specify a username." and "You must specify a password." are displayed on the screen
+        Then The system displays the messages below
+            | formMessage               | userMessage  | passwordMessage |
+            |There was a problem with your login and/or errors exist in your form.|You must specify a username.|You must specify a password." are displayed on the screen|
 
