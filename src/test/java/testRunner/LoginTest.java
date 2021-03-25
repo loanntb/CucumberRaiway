@@ -6,7 +6,8 @@ import org.testng.annotations.DataProvider;
 
 
 @CucumberOptions(features = {"src/test/resources/features/Login.feature"},
-        glue = {"stepDefinitions"}
+        glue = {"stepDefinitions"},
+        plugin = { "pretty", "html:target/cucumber-reports" }
 )
 public class LoginTest extends BaseTest {
     @Override
