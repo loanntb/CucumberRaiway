@@ -1,14 +1,14 @@
-package testRunner;
+package testrunner;
 
-import base.BaseTest;
+import base.BaseUtil;
 import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 
 @CucumberOptions(features = {"src/test/resources/features/Register.feature"},
-        glue = {"stepDefinitions", "stepConfig"}
+        glue = {"stepdefinitions", "stepconfig"}
 )
-public class RegisterTest extends BaseTest {
+public class RegisterTest extends BaseUtil {
     @Override
     @DataProvider(parallel = true)
     public Object[][] scenarios() {

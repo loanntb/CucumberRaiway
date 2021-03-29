@@ -1,4 +1,4 @@
-package common;
+package utilities;
 
 public class Constant {
     //Home Page

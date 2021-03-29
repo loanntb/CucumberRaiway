@@ -1,14 +1,14 @@
-package stepDefinitions;
+package stepdefinitions;
 
-import common.Constant;
-import helper.DriverHelper;
+import utilities.Constant;
+import helper.Driver;
 import io.cucumber.java8.En;
-import pageObjects.BasePage;
+import pageobjects.BasePage;
 
 public class CommonStep extends BasePage implements En {
     public CommonStep() {
         Given("^I navigate to Raiway website$", () -> {
-            DriverHelper.navigateToUrl(Constant.RAILWAY_URL);
+            Driver.navigateToUrl(Constant.RAILWAY_URL);
         });
         When("^I click on \"([^\"]*)\" tab$", this::clickOnMenuTab);
     }

@@ -1,5 +1,5 @@
-package pageObjects;
-import helper.DriverHelper;
+package pageobjects;
+import helper.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -8,11 +8,11 @@ public class BasePage {
     private String errorMessage = "//div[@id='content']/form//ol/li[@class='%s']/label[@class='validation-error']";
 
     private WebElement getMenuTab(String text) {
-        return DriverHelper.getWebDriver().findElement(By.xpath(String.format(menuTab, text)));
+        return Driver.getWebDriver().findElement(By.xpath(String.format(menuTab, text)));
     }
 
     private WebElement getErrorMessage(String text) {
-        return DriverHelper.getWebDriver().findElement(By.xpath(String.format(errorMessage, text)));
+        return Driver.getWebDriver().findElement(By.xpath(String.format(errorMessage, text)));
     }
 
     /***

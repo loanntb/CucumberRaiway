@@ -1,10 +1,10 @@
-package stepDefinitions;
+package stepdefinitions;
 
-import common.Log;
+import utilities.Log;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java8.En;
 import org.testng.Assert;
-import pageObjects.LoginPage;
+import pageobjects.LoginPage;
 
 import java.util.List;
 import java.util.Map;
@@ -14,7 +14,7 @@ public class LoginSteps implements En {
 
     public LoginSteps() {
         Log.info("Login with valid username and password");
-        When("^I Login with username \"([^\"]*)\" and password \"([^\"]*)\"$", (String username, String password) -> {
+        When("I Login with username {string} and password {string}", (String username, String password) -> {
             Log.info("Login with username" + username + " and password" + password);
             loginPage.login(username, password);
         });
@@ -24,16 +24,16 @@ public class LoginSteps implements En {
         });
 
         Log.info("Login with a username and a  wrong password");
-        When("^I Login with username \"([^\"]*)\" and a wrong password \"([^\"]*)\"$", (String username, String password) -> {
+        When("I Login with username {string} and a wrong password {string}", (String username, String password) -> {
             loginPage.login(username, password);
         });
-        Then("^The error message \"([^\"]*)\" is displayed on the screen$", (String errorMessage) -> {
+        Then("The error message {string} is displayed on the screen", (String errorMessage) -> {
             Log.info("Check error messages");
             Assert.assertEquals(loginPage.errorFormMessage(), errorMessage, "Error message form");
         });
 
         Log.info("Login with all blank username and password");
-        When("^Login with username \"([^\"]*)\" and password \"([^\"]*)\"$", (String username, String password) -> {
+        When("Login with username {string} and password {string}", (String username, String password) -> {
             loginPage.login(username, password);
         });
 

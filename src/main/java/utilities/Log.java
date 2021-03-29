@@ -1,4 +1,4 @@
-package common;
+package utilities;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;

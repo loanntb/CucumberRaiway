@@ -1,20 +1,18 @@
 package helper;
 
 ;
-import common.Constant;
-import common.Log;
+import utilities.Constant;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class DriverHelper {
+public class Driver {
 
     private static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
 
