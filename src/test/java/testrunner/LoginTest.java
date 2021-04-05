@@ -7,7 +7,11 @@ import org.testng.annotations.DataProvider;
 
 @CucumberOptions(features = {"src/test/resources/features/Login.feature"},
         glue = {"stepdefinitions"},
-        plugin = { "pretty", "html:target/cucumber-reports" }
+        plugin = {
+                "io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm",
+                "progress",
+                "summary"
+        }
 )
 public class LoginTest extends BaseUtil {
     @Override

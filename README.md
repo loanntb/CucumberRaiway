@@ -28,5 +28,5 @@
 For each scenario, I have a dedicated suite created for it. Just right click on it and click `Run` to execute the test.
 
 ### Test results
-- Cucumber extent report
-- HTML test results can be found at [target](cucumbe-reports/index)  
+- Allure-cucumber
+- HTML test results can be found at [target](allure-results)  

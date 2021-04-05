@@ -13,17 +13,15 @@ public class LoginSteps implements En {
     private LoginPage loginPage = new LoginPage();
 
     public LoginSteps() {
-        Log.info("Login with valid username and password");
         When("I Login with username {string} and password {string}", (String username, String password) -> {
             Log.info("Login with username" + username + " and password" + password);
             loginPage.login(username, password);
         });
-        Then("^Logout tab is displayed on the menu tab$", () -> {
+        Then("Logout tab is displayed on the menu tab", () -> {
             Log.info("Check Logout Tab Displayed tab is displayed.");
             Assert.assertTrue(loginPage.isLogoutTabDisplayed());
         });
 
-        Log.info("Login with a username and a  wrong password");
         When("I Login with username {string} and a wrong password {string}", (String username, String password) -> {
             loginPage.login(username, password);
         });
@@ -32,7 +30,6 @@ public class LoginSteps implements En {
             Assert.assertEquals(loginPage.errorFormMessage(), errorMessage, "Error message form");
         });
 
-        Log.info("Login with all blank username and password");
         When("Login with username {string} and password {string}", (String username, String password) -> {
             loginPage.login(username, password);
         });
@@ -56,5 +53,4 @@ public class LoginSteps implements En {
         });
 
     }
-
 }

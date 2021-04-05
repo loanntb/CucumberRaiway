@@ -7,9 +7,9 @@ import pageobjects.BasePage;
 
 public class CommonStep extends BasePage implements En {
     public CommonStep() {
-        Given("^I navigate to Raiway website$", () -> {
+        Given("I navigate to Raiway website", () -> {
             Driver.navigateToUrl(Constant.RAILWAY_URL);
         });
-        When("^I click on \"([^\"]*)\" tab$", this::clickOnMenuTab);
+        When("I click on {string} tab", this::clickOnMenuTab);
     }
 }

@@ -15,7 +15,7 @@ public class RegisterSteps implements En {
 
     public RegisterSteps() {
 
-        When("^I register a new account form with the following data below$", (DataTable dt) -> {
+        When("I register a new account form with the following data below", (DataTable dt) -> {
             List<Map<String, String>> list = dt.asMaps(String.class, String.class);
             for (Map<String, String> fieldMap : list) {
                 email = fieldMap.get("email");
