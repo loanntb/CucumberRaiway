@@ -8,9 +8,10 @@ import org.testng.annotations.DataProvider;
 @CucumberOptions(features = {"src/test/resources/features/Login.feature"},
         glue = {"stepdefinitions"},
         plugin = {
-                "io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm",
-                "progress",
-                "summary"
+                "pretty",
+                "html:target/cucumber",
+                "json:target/cucumber.json",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         }
 )
 public class LoginTest extends BaseUtil {
