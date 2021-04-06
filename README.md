@@ -4,6 +4,8 @@
     + [Setup](#setup)
 * [Run Tests](#runtest)
 * [Test results](#testresults)
+* [CICD](#CICD)
+* [Distribute Running](#Distribute)
     ## Install
     ### Prerequisite
     Below applications are required
@@ -28,5 +30,5 @@
 For each scenario, I have a dedicated suite created for it. Just right click on it and click `Run` to execute the test.
 
 ### Test results
-- Allure-cucumber
-- HTML test results can be found at [target](allure-results)  
+- Cucumber Extent report
+- HTML test results can be found at [test-output](HtmlReport/ExtenReport)  

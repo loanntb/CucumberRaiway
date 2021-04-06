@@ -7,31 +7,31 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasePage {
     //Locators
-    private final By EMAIL_TEXTBOX = By.id("username");
-    private final By PASSWORD_TEXTBOX = By.id("password");
-    private final By LOGIN_BUTTON = By.cssSelector(".LoginForm input[title='Login']");
-    private final By LOGOUT_TAB = By.xpath("//div[@id='menu']/ul//span[.='Log out']");
-    private final By ERROR_MESSAGE_FORM = By.cssSelector("#content .message");
+    private final By emailTXT = By.id("username");
+    private final By passwordTXT = By.id("password");
+    private final By loginButton = By.cssSelector(".LoginForm input[title='Login']");
+    private final By logoutTab = By.xpath("//div[@id='menu']/ul//span[.='Log out']");
+    private final By errorMessageForm = By.cssSelector("#content .message");
 
     //Element
     private WebElement getLoginButton() {
-        return Driver.getWebDriver().findElement(LOGIN_BUTTON);
+        return Driver.getWebDriver().findElement(loginButton);
     }
 
     private WebElement getEmail() {
-        return Driver.getWebDriver().findElement(EMAIL_TEXTBOX);
+        return Driver.getWebDriver().findElement(emailTXT);
     }
 
     private WebElement getPassword() {
-        return Driver.getWebDriver().findElement(PASSWORD_TEXTBOX);
+        return Driver.getWebDriver().findElement(passwordTXT);
     }
 
-    private WebElement getERROR_MESSAGE_FORM() {
-        return Driver.getWebDriver().findElement(ERROR_MESSAGE_FORM);
+    private WebElement getErrorMessageForm() {
+        return Driver.getWebDriver().findElement(errorMessageForm);
     }
 
-    private WebElement getLOGOUT_TAB() {
-        return Driver.getWebDriver().findElement(LOGOUT_TAB);
+    private WebElement getLogoutTab() {
+        return Driver.getWebDriver().findElement(logoutTab);
     }
 
     private void enterEmail(String email) {
@@ -54,7 +54,7 @@ public class LoginPage extends BasePage {
     }
 
     public String errorFormMessage() {
-        return getText(getERROR_MESSAGE_FORM());
+        return getText(getErrorMessageForm());
     }
 
     /***
@@ -63,10 +63,9 @@ public class LoginPage extends BasePage {
      */
     public Boolean isLogoutTabDisplayed() {
         try {
-            return getLOGOUT_TAB().isDisplayed();
+            return getLogoutTab().isDisplayed();
         } catch (NoSuchElementException e) {
             return false;
         }
     }
-
 }

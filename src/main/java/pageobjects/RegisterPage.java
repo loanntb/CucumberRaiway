@@ -8,34 +8,34 @@ import static helper.Driver.scrollToPageView;
 
 public class RegisterPage extends BasePage {
     //Locators
-    private final By EMAIL_TEXTBOX = By.id("email");
-    private final By PASSSWORD_TEXTBOX = By.id("password");
-    private final By CONFIRM_PASSWORD_TEXTBOX = By.id("confirmPassword");
-    private final By PID_TEXTBOX = By.id("pid");
-    private final By REGISTER_BUTTON = By.cssSelector("#RegisterForm .form-actions input[title='Register']");
-    private final By INFO_SUCCESSFUL_MESSAGE_LABLE = By.cssSelector("#content p");
-    private final By ERROR_FORM_MESSAGE = By.cssSelector("#content .message");
+    private final By emailTXT = By.id("email");
+    private final By passwordTXT = By.id("password");
+    private final By confirmPasswordTXT = By.id("confirmPassword");
+    private final By pidTXT = By.id("pid");
+    private final By registerButton = By.cssSelector("#RegisterForm .form-actions input[title='Register']");
+    private final By infoMessageLabel = By.cssSelector("#content p");
+    private final By errorFormMessageLabel = By.cssSelector("#content .message");
 
     //Element
 
     private WebElement getRegisterButton() {
-        return Driver.getWebDriver().findElement(REGISTER_BUTTON);
+        return Driver.getWebDriver().findElement(registerButton);
     }
 
     private WebElement getEmail() {
-        return Driver.getWebDriver().findElement(EMAIL_TEXTBOX);
+        return Driver.getWebDriver().findElement(emailTXT);
     }
 
     private WebElement getPassword() {
-        return Driver.getWebDriver().findElement(PASSSWORD_TEXTBOX);
+        return Driver.getWebDriver().findElement(passwordTXT);
     }
 
     private WebElement getConfirmPassword() {
-        return Driver.getWebDriver().findElement(CONFIRM_PASSWORD_TEXTBOX);
+        return Driver.getWebDriver().findElement(confirmPasswordTXT);
     }
 
     private WebElement getPID() {
-        return Driver.getWebDriver().findElement(PID_TEXTBOX);
+        return Driver.getWebDriver().findElement(pidTXT);
     }
 
     //method
@@ -54,11 +54,11 @@ public class RegisterPage extends BasePage {
     }
 
     public String errorFormMessage() {
-        return getText(Driver.getWebDriver().findElement(ERROR_FORM_MESSAGE));
+        return getText(Driver.getWebDriver().findElement(errorFormMessageLabel));
     }
 
     public String infoSuccessfulMessage() {
-        return getText(Driver.getWebDriver().findElement(INFO_SUCCESSFUL_MESSAGE_LABLE));
+        return getText(Driver.getWebDriver().findElement(infoMessageLabel));
     }
 
 }
