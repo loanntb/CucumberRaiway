@@ -16,7 +16,7 @@ import org.testng.annotations.DataProvider;
 )
 public class LoginTest extends BaseUtil {
     @Override
-    @DataProvider(parallel = false)
+    @DataProvider(parallel = true)
     public Object[][] scenarios() {
         return super.scenarios();
     }

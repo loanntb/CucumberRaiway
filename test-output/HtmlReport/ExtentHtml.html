@@ -48,8 +48,7 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
-			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
 		<span class='report-name'> Cucumber Report</span>
@@ -58,7 +57,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Apr 6, 2021 02:22:03 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Apr 7, 2021 11:21:07 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -74,7 +73,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -117,10 +115,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>2</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -131,10 +129,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='60%'><span class='strong'>3</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='40%'>2</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
@@ -147,10 +145,10 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='90%'><span class='strong'>18</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>16</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='10%'>2</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
@@ -170,59 +168,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
-					<div class='test-heading'>
-						<span class='test-name'>RegisterFeature</span>
-						<span class='test-time'>Apr 6, 2021 02:22:09 PM</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-					<div class='test-content hide'>
-<div class="sr-filters bdd-filters">
-	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
-	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
-	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
-	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
-</div>
-<div class='scenario node' test-id='2' status='fail'>
-	<span class='duration right label'>0h 0m 27s+914ms</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: Verify user can register with valid data</div>
-	</div>
-	<ul class='steps'>
-		<li test-id='6' class='node given pass' status='pass'>
-			<div class="step-name" title="stepdefinitions.CommonStep.<init>(CommonStep.java:10)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given I navigate to Raiway website</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='9' class='node when pass' status='pass'>
-			<div class="step-name" title="stepdefinitions.CommonStep.<init>(CommonStep.java:13)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When I click on "Register" tab</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='11' class='node when pass' status='pass'>
-			<div class="step-name" title="stepdefinitions.RegisterSteps.<init>(RegisterSteps.java:18)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When I register a new account form with the following data below</div>
-			<div class="node-step"><table class='runtime-table table-striped table'><tr><td>email</td><td>password</td><td>confirmPassword</td><td>pid</td></tr><tr><td>abc76088@gmail.com</td><td>123456789</td><td>123456789</td><td>12345678</td></tr></table></div>
-		</li>
-		<li test-id='12' class='node then fail' status='fail'>
-			<div class="step-name" title="stepdefinitions.RegisterSteps.<init>(RegisterSteps.java:31)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then The information register successfully "Registration Confirmed! You can now log in to the site." message is displayed on the screen</div>
-			<textarea disabled class="code-block">java.lang.AssertionError: User sign up Success expected [Registration Confirmed! You can now log in to the site.] but found [Please fill the form below to create a new account or login if you already have one.
-If you already created an account but haven't confirmed it yet, go here and enter the confirmation code which can be found in your email.
-Please make sure your PID/Passport Number is correct. It can't be changed.]
-	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:575)
-	at stepdefinitions.RegisterSteps.lambda$new$1(RegisterSteps.java:33)
-	at ✽.The information register successfully "Registration Confirmed! You can now log in to the site." message is displayed on the screen(file:///E:/RaiwayBDD/CucumberRaiway/src/test/resources/features/Register.feature:12)
-</textarea>
-		</li>
-	</ul>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='3'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>LoginFeature</span>
-						<span class='test-time'>Apr 6, 2021 02:22:09 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Apr 7, 2021 11:21:15 AM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -231,42 +181,42 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario outline node' test-id='4' status='pass'>
-	<span class='duration right label'>0h 0m 53s+845ms</span>
+<div class='scenario outline node' test-id='2' status='pass'>
+	<span class='duration right label'>0h 0m 35s+115ms</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Login with valid username and  password</div>
-		<table class='runtime-table table-striped table'><tr><td>username</td><td>password</td></tr><tr><td>loan119044@gmail.com</td><td>123456789</td></tr><tr><td>hello@gmail.com</td><td>123456789</td></tr></table>
+		<table class='runtime-table table-striped table'><tr><td>username</td><td>password</td></tr><tr><td>loan119044@gmail.com</td><td>123456789</td></tr><tr><td>hello@gmail.com</td><td>123456789</td></tr></table><table class='runtime-table table-striped table'><tr><td>username</td><td>password</td></tr><tr><td>loan119044@gmail.com</td><td>123456789</td></tr><tr><td>hello@gmail.com</td><td>123456789</td></tr></table>
 	</div>
 	<ul class='steps'>
-		<li test-id='5' class='node scenario pass' status='pass'>
+		<li test-id='3' class='node scenario pass' status='pass'>
 			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Login with valid username and  password</div>
 			<ul class='gc steps'>
-				<li test-id='7' class='gc given pass' status='pass'>
+				<li test-id='11' class='gc given pass' status='pass'>
 					<h6 class="step-name" title="stepdefinitions.CommonStep.<init>(CommonStep.java:10)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given I navigate to Raiway website</h6>
 					<div class="node-step"></div>
 				</li>
-				<li test-id='8' class='gc when pass' status='pass'>
+				<li test-id='14' class='gc when pass' status='pass'>
 					<h6 class="step-name" title="stepdefinitions.CommonStep.<init>(CommonStep.java:13)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When I click on "Login" tab</h6>
 					<div class="node-step"></div>
 				</li>
-				<li test-id='10' class='gc when pass' status='pass'>
+				<li test-id='16' class='gc when pass' status='pass'>
 					<h6 class="step-name" title="stepdefinitions.LoginSteps.<init>(LoginSteps.java:16)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When I Login with username "loan119044@gmail.com" and password "123456789"</h6>
 					<div class="node-step"></div>
 				</li>
-				<li test-id='14' class='gc then pass' status='pass'>
+				<li test-id='24' class='gc then pass' status='pass'>
 					<h6 class="step-name" title="stepdefinitions.LoginSteps.<init>(LoginSteps.java:20)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Logout tab is displayed on the menu tab</h6>
 					<div class="node-step"></div>
 				</li>
 			</ul>
 		</li>
-		<li test-id='16' class='node scenario pass' status='pass'>
+		<li test-id='4' class='node scenario pass' status='pass'>
 			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Login with valid username and  password</div>
 			<ul class='gc steps'>
-				<li test-id='17' class='gc given pass' status='pass'>
+				<li test-id='10' class='gc given pass' status='pass'>
 					<h6 class="step-name" title="stepdefinitions.CommonStep.<init>(CommonStep.java:10)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given I navigate to Raiway website</h6>
 					<div class="node-step"></div>
 				</li>
-				<li test-id='18' class='gc when pass' status='pass'>
+				<li test-id='13' class='gc when pass' status='pass'>
 					<h6 class="step-name" title="stepdefinitions.CommonStep.<init>(CommonStep.java:13)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When I click on "Login" tab</h6>
 					<div class="node-step"></div>
 				</li>
@@ -274,7 +224,7 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 					<h6 class="step-name" title="stepdefinitions.LoginSteps.<init>(LoginSteps.java:16)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When I Login with username "hello@gmail.com" and password "123456789"</h6>
 					<div class="node-step"></div>
 				</li>
-				<li test-id='20' class='gc then pass' status='pass'>
+				<li test-id='26' class='gc then pass' status='pass'>
 					<h6 class="step-name" title="stepdefinitions.LoginSteps.<init>(LoginSteps.java:20)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Logout tab is displayed on the menu tab</h6>
 					<div class="node-step"></div>
 				</li>
@@ -282,29 +232,29 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 		</li>
 	</ul>
 </div>
-<div class='scenario outline node' test-id='22' status='pass'>
-	<span class='duration right label'>0h 0m 27s+481ms</span>
+<div class='scenario outline node' test-id='5' status='pass'>
+	<span class='duration right label'>0h 0m 18s+245ms</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Login with invalid username and password</div>
 		<table class='runtime-table table-striped table'><tr><td>username</td><td>password</td></tr><tr><td>loan119044@gmail.com</td><td>wrongpassword</td></tr></table>
 	</div>
 	<ul class='steps'>
-		<li test-id='23' class='node scenario pass' status='pass'>
+		<li test-id='6' class='node scenario pass' status='pass'>
 			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Login with invalid username and password</div>
 			<ul class='gc steps'>
-				<li test-id='24' class='gc given pass' status='pass'>
+				<li test-id='9' class='gc given pass' status='pass'>
 					<h6 class="step-name" title="stepdefinitions.CommonStep.<init>(CommonStep.java:10)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given I navigate to Raiway website</h6>
 					<div class="node-step"></div>
 				</li>
-				<li test-id='25' class='gc when pass' status='pass'>
+				<li test-id='12' class='gc when pass' status='pass'>
 					<h6 class="step-name" title="stepdefinitions.CommonStep.<init>(CommonStep.java:13)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When I click on "Login" tab</h6>
 					<div class="node-step"></div>
 				</li>
-				<li test-id='26' class='gc when pass' status='pass'>
+				<li test-id='17' class='gc when pass' status='pass'>
 					<h6 class="step-name" title="stepdefinitions.LoginSteps.<init>(LoginSteps.java:25)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When I Login with username "loan119044@gmail.com" and a wrong password "wrongpassword"</h6>
 					<div class="node-step"></div>
 				</li>
-				<li test-id='27' class='gc then pass' status='pass'>
+				<li test-id='22' class='gc then pass' status='pass'>
 					<h6 class="step-name" title="stepdefinitions.LoginSteps.<init>(LoginSteps.java:28)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then The error message "Invalid username or password. Please try again." is displayed on the screen</h6>
 					<div class="node-step"></div>
 				</li>
@@ -312,36 +262,27 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='29' status='fail'>
-	<span class='duration right label'>0h 0m 26s+988ms</span>
+<div class='scenario node' test-id='7' status='pass'>
+	<span class='duration right label'>0h 0m 17s+823ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: Login with all blank username and password</div>
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Login with all blank username and password</div>
 	</div>
 	<ul class='steps'>
-		<li test-id='30' class='node given pass' status='pass'>
+		<li test-id='8' class='node given pass' status='pass'>
 			<div class="step-name" title="stepdefinitions.CommonStep.<init>(CommonStep.java:10)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given I navigate to Raiway website</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='31' class='node when pass' status='pass'>
+		<li test-id='15' class='node when pass' status='pass'>
 			<div class="step-name" title="stepdefinitions.CommonStep.<init>(CommonStep.java:13)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When I click on "Login" tab</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='32' class='node when pass' status='pass'>
+		<li test-id='18' class='node when pass' status='pass'>
 			<div class="step-name" title="stepdefinitions.LoginSteps.<init>(LoginSteps.java:33)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When Login with username "" and password ""</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='33' class='node then fail' status='fail'>
-			<div class="step-name" title="stepdefinitions.LoginSteps.<init>(LoginSteps.java:37)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then The system displays the messages below</div>
-			<div class="node-step"><table class='runtime-table table-striped table'><tr><td>formMessage</td><td>userMessage</td><td>passwordMessage</td></tr><tr><td>There was a problem with your login and/or errors exist in your form.</td><td>You must specify a username.</td><td>You must specify a password." are displayed on the screen</td></tr></table></div>
-			<textarea disabled class="code-block">java.lang.AssertionError: Invalid username expected [null] but found [You must specify a username.]
-	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.failNotEquals(Assert.java:969)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:575)
-	at stepdefinitions.LoginSteps.lambda$new$5(LoginSteps.java:48)
-	at ✽.The system displays the messages below(file:///E:/RaiwayBDD/CucumberRaiway/src/test/resources/features/Login.feature:24)
-</textarea>
+		<li test-id='20' class='node then pass' status='pass'>
+			<div class="step-name" title="stepdefinitions.LoginSteps.<init>(LoginSteps.java:37)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then The system displays the messages below</div>
+			<div class="node-step"><table class='runtime-table table-striped table'><tr><td>Form Message</td><td>User Message</td><td>Password Message</td></tr><tr><td>There was a problem with your login and/or errors exist in your form.</td><td>You must specify a username.</td><td>You must specify a password.</td></tr></table></div>
 		</li>
 	</ul>
 </div>
@@ -367,86 +308,7 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 	</div>
 	<!-- subview right -->
 </div>
-<!-- test view --><!-- category view --><div id='exception-view' class='view hide'>
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-				<i class='material-icons'>search</i> Search
-				</a>
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-	<div class='subview-left left'>
-		<div class='view-summary'>
-			<ul id='exception-collection' class='exception-collection'>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>java.lang.AssertionError</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Apr 6, 2021 02:22:37 PM</td>
-										<td class='linked' test-id='12'>Then The information register successfully "Registration Confirmed! You can now log in to the site." message is displayed on the screen</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.AssertionError: User sign up Success expected [Registration Confirmed! You can now log in to the site.] but found [Please fill the form below to create a new account or login if you already have one.
-If you already created an account but haven't confirmed it yet, go here and enter the confirmation code which can be found in your email.
-Please make sure your PID/Passport Number is correct. It can't be changed.]
-	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:575)
-	at stepdefinitions.RegisterSteps.lambda$new$1(RegisterSteps.java:33)
-	at ✽.The information register successfully "Registration Confirmed! You can now log in to the site." message is displayed on the screen(file:///E:/RaiwayBDD/CucumberRaiway/src/test/resources/features/Register.feature:12)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Apr 6, 2021 02:24:02 PM</td>
-										<td class='linked' test-id='33'>Then The system displays the messages below</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.AssertionError: Invalid username expected [null] but found [You must specify a username.]
-	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.failNotEquals(Assert.java:969)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:575)
-	at stepdefinitions.LoginSteps.lambda$new$5(LoginSteps.java:48)
-	at ✽.The system displays the messages below(file:///E:/RaiwayBDD/CucumberRaiway/src/test/resources/features/Login.feature:24)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='exception-name'></h5>
-		</div>
-	</div>
-</div>
-<!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -454,37 +316,37 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>1</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>5</div>
+					<div class='panel-lead'>4</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>20</div>
+					<div class='panel-lead'>16</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 6, 2021 02:22:03 PM</div>
+					<div class='panel-lead'>Apr 7, 2021 11:21:07 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 6, 2021 02:24:03 PM</div>
+			 		<div class='panel-lead'>Apr 7, 2021 11:21:51 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 1m 59s+672ms</div>
+					<div class='panel-lead'>0h 0m 43s+530ms</div>
 				</div>
 			</div>
 		</div>
@@ -495,39 +357,39 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 2,
-				passParent: 0,
-				failParent: 2,
+                parentCount: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 2,
-				childCount: 5,
-				passChild: 3,
-				failChild: 2,
+				exceptionsParent: 0,
+				childCount: 4,
+				passChild: 4,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 2,
-				grandChildCount: 20,
-				passGrandChild: 18,
-				failGrandChild: 2,
+				exceptionsChild: 0,
+				grandChildCount: 16,
+				passGrandChild: 16,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
 				skipGrandChild: 0,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 2,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "RegisterFeature":27.914,"LoginFeature":113.336
+			        "LoginFeature":17.822
 			};
 		</script>
 	

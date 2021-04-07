@@ -1,4 +1,5 @@
 package pageobjects;
+
 import helper.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -19,11 +20,11 @@ public class BasePage {
      * Choose Menu
      * @param text
      */
-    public void clickOnMenuTab(String text){
+    public void clickOnMenuTab(String text) {
         getMenuTab(text).click();
     }
 
-    public String errorMessages(String text){
+    public String errorMessages(String text) {
         return getText(getErrorMessage(text));
     }
 

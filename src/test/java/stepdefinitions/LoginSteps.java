@@ -34,20 +34,14 @@ public class LoginSteps implements En {
             loginPage.login(username, password);
         });
 
-        Then("^The system displays the messages below$", (DataTable dt) -> {
-            String formMessage, userMessage, passwordMessage;
+        Then("The system displays the messages below", (DataTable dt) -> {
             List<Map<String, String>> list = dt.asMaps(String.class, String.class);
             for (Map<String, String> fieldMap : list) {
-                formMessage = fieldMap.get("formMessage");
-                userMessage = fieldMap.get("usernameMessage");
-                passwordMessage = fieldMap.get("passwordMessage");
-                Log.info("Check error messages");
+                String formMessage = fieldMap.get("Form Message");
+                String userMessage = fieldMap.get("User Message");
+                String passwordMessage = fieldMap.get("Password Message");
                 Assert.assertEquals(loginPage.errorFormMessage(), formMessage, "Error message form");
-
-                Log.info("Check an error email message");
                 Assert.assertEquals(loginPage.errorMessages("username"), userMessage, "Invalid username");
-
-                Log.info("Check an error password message");
                 Assert.assertEquals(loginPage.errorMessages("password"), passwordMessage, "Invalid password");
             }
         });

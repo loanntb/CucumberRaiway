@@ -43,14 +43,6 @@
 							</a>
 						</li>
 												<li>
-							<a href="exception.html">
-							<span class="nav-icon">
-							<i class="fa fa-warning"></i>
-							</span>
-							<span class="nav-text">Exceptions</span>
-							</a>
-						</li>
-						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -95,7 +87,7 @@
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
-										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
+										
 										
 										
 										
@@ -116,106 +108,19 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="fail">
-											<div class="st fail test l0" 
+											<div class="tsc" status="pass">
+											<div class="st pass test l0" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:22:09</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">[RegisterFeature] started</span>
-												
-											</div>
-											<div class="st fail test l1" 
-												tags=""
-												devices="">
-												<span class="tt">04.06.2021 14:22:09</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">|---[Verify user can register with valid data] started</span>
-												
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">04.06.2021 14:22:09</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:15</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I navigate to Raiway website] started</span>
-												
-												<div class="st pass">
-													<span class="tt">04.06.2021 14:22:22</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I navigate to Raiway website]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">04.06.2021 14:22:22</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When I click on "Register" tab] started</span>
-												
-												<div class="st pass">
-													<span class="tt">04.06.2021 14:22:35</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When I click on "Register" tab]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags=""
-												devices="">
-												<span class="tt">04.06.2021 14:22:35</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When I register a new account form with the following data below] started</span>
-												
-												<div class="st pass">
-													<span class="tt">04.06.2021 14:22:35</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When I register a new account form with the following data below]</span>
-													
-													<span class="td"><table class='runtime-table table-striped table'><tr><td>email</td><td>password</td><td>confirmPassword</td><td>pid</td></tr><tr><td>abc76088@gmail.com</td><td>123456789</td><td>123456789</td><td>12345678</td></tr></table></span>
-												</div>
-											</div>
-											<div class="st fail test l2" 
-												tags=""
-												devices="">
-												<span class="tt">04.06.2021 14:22:37</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then The information register successfully "Registration Confirmed! You can now log in to the site." message is displayed on the screen] started</span>
-												
-												<div class="st fail">
-													<span class="tt">04.06.2021 14:22:37</span>&nbsp;
-													<span class="ts">fail</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then The information register successfully "Registration Confirmed! You can now log in to the site." message is displayed on the screen]</span>
-													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">java.lang.AssertionError: User sign up Success expected [Registration Confirmed! You can now log in to the site.] but found [Please fill the form below to create a new account or login if you already have one.
-If you already created an account but haven't confirmed it yet, go here and enter the confirmation code which can be found in your email.
-Please make sure your PID/Passport Number is correct. It can't be changed.]
-	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:575)
-	at stepdefinitions.RegisterSteps.lambda$new$1(RegisterSteps.java:33)
-	at ✽.The information register successfully "Registration Confirmed! You can now log in to the site." message is displayed on the screen(file:///E:/RaiwayBDD/CucumberRaiway/src/test/resources/features/Register.feature:12)
-</textarea></span>
-												</div>
-											</div>
-											</div>
-											<div class="tsc" status="fail">
-											<div class="st fail test l0" 
-												tags=""
-												devices="">
-												<span class="tt">04.06.2021 14:22:09</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
 												<span class="tn">[LoginFeature] started</span>
 												
 											</div>
 											<div class="st pass test l1" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:22:09</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:15</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">|---[Login with valid username and  password] started</span>
 												
@@ -223,7 +128,7 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:22:09</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:15</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Login with valid username and  password] started</span>
 												
@@ -231,12 +136,12 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:22:09</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:15</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I navigate to Raiway website] started</span>
 												
 												<div class="st pass">
-													<span class="tt">04.06.2021 14:22:22</span>&nbsp;
+													<span class="tt">04.07.2021 11:21:29</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I navigate to Raiway website]</span>
 													
@@ -246,12 +151,12 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:22:22</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:29</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When I click on "Login" tab] started</span>
 												
 												<div class="st pass">
-													<span class="tt">04.06.2021 14:22:35</span>&nbsp;
+													<span class="tt">04.07.2021 11:21:31</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When I click on "Login" tab]</span>
 													
@@ -261,12 +166,12 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:22:35</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:31</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When I Login with username "loan119044@gmail.com" and password "123456789"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">04.06.2021 14:22:37</span>&nbsp;
+													<span class="tt">04.07.2021 11:21:33</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When I Login with username "loan119044@gmail.com" and password "123456789"]</span>
 													
@@ -276,12 +181,12 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:22:37</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:33</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Logout tab is displayed on the menu tab] started</span>
 												
 												<div class="st pass">
-													<span class="tt">04.06.2021 14:22:37</span>&nbsp;
+													<span class="tt">04.07.2021 11:21:33</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Logout tab is displayed on the menu tab]</span>
 													
@@ -291,7 +196,7 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:22:41</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:15</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Login with valid username and  password] started</span>
 												
@@ -299,12 +204,12 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:22:41</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:15</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I navigate to Raiway website] started</span>
 												
 												<div class="st pass">
-													<span class="tt">04.06.2021 14:22:57</span>&nbsp;
+													<span class="tt">04.07.2021 11:21:29</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I navigate to Raiway website]</span>
 													
@@ -314,12 +219,12 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:22:57</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:29</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When I click on "Login" tab] started</span>
 												
 												<div class="st pass">
-													<span class="tt">04.06.2021 14:23:01</span>&nbsp;
+													<span class="tt">04.07.2021 11:21:31</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When I click on "Login" tab]</span>
 													
@@ -329,12 +234,12 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:23:01</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:31</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When I Login with username "hello@gmail.com" and password "123456789"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">04.06.2021 14:23:03</span>&nbsp;
+													<span class="tt">04.07.2021 11:21:50</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When I Login with username "hello@gmail.com" and password "123456789"]</span>
 													
@@ -344,12 +249,12 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:23:03</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:50</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Logout tab is displayed on the menu tab] started</span>
 												
 												<div class="st pass">
-													<span class="tt">04.06.2021 14:23:03</span>&nbsp;
+													<span class="tt">04.07.2021 11:21:50</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then Logout tab is displayed on the menu tab]</span>
 													
@@ -359,7 +264,7 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 											<div class="st pass test l1" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:23:05</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:15</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">|---[Login with invalid username and password] started</span>
 												
@@ -367,7 +272,7 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:23:05</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:15</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Login with invalid username and password] started</span>
 												
@@ -375,12 +280,12 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:23:05</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:15</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I navigate to Raiway website] started</span>
 												
 												<div class="st pass">
-													<span class="tt">04.06.2021 14:23:23</span>&nbsp;
+													<span class="tt">04.07.2021 11:21:29</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I navigate to Raiway website]</span>
 													
@@ -390,12 +295,12 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:23:23</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:29</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When I click on "Login" tab] started</span>
 												
 												<div class="st pass">
-													<span class="tt">04.06.2021 14:23:32</span>&nbsp;
+													<span class="tt">04.07.2021 11:21:31</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When I click on "Login" tab]</span>
 													
@@ -405,12 +310,12 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:23:32</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:31</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When I Login with username "loan119044@gmail.com" and a wrong password "wrongpassword"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">04.06.2021 14:23:33</span>&nbsp;
+													<span class="tt">04.07.2021 11:21:33</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When I Login with username "loan119044@gmail.com" and a wrong password "wrongpassword"]</span>
 													
@@ -420,35 +325,35 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:23:33</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:33</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then The error message "Invalid username or password. Please try again." is displayed on the screen] started</span>
 												
 												<div class="st pass">
-													<span class="tt">04.06.2021 14:23:33</span>&nbsp;
+													<span class="tt">04.07.2021 11:21:33</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then The error message "Invalid username or password. Please try again." is displayed on the screen]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st fail test l1" 
+											<div class="st pass test l1" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:23:35</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tt">04.07.2021 11:21:15</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">|---[Login with all blank username and password] started</span>
 												
 											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:23:35</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:15</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I navigate to Raiway website] started</span>
 												
 												<div class="st pass">
-													<span class="tt">04.06.2021 14:23:52</span>&nbsp;
+													<span class="tt">04.07.2021 11:21:29</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I navigate to Raiway website]</span>
 													
@@ -458,12 +363,12 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:23:52</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:29</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When I click on "Login" tab] started</span>
 												
 												<div class="st pass">
-													<span class="tt">04.06.2021 14:24:01</span>&nbsp;
+													<span class="tt">04.07.2021 11:21:31</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When I click on "Login" tab]</span>
 													
@@ -473,46 +378,31 @@ Please make sure your PID/Passport Number is correct. It can't be changed.]
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:24:01</span>&nbsp;
+												<span class="tt">04.07.2021 11:21:31</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When Login with username "" and password ""] started</span>
 												
 												<div class="st pass">
-													<span class="tt">04.06.2021 14:24:02</span>&nbsp;
+													<span class="tt">04.07.2021 11:21:33</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When Login with username "" and password ""]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st fail test l2" 
+											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">04.06.2021 14:24:02</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tt">04.07.2021 11:21:33</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then The system displays the messages below] started</span>
 												
 												<div class="st pass">
-													<span class="tt">04.06.2021 14:24:02</span>&nbsp;
+													<span class="tt">04.07.2021 11:21:33</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then The system displays the messages below]</span>
 													
-													<span class="td"><table class='runtime-table table-striped table'><tr><td>formMessage</td><td>userMessage</td><td>passwordMessage</td></tr><tr><td>There was a problem with your login and/or errors exist in your form.</td><td>You must specify a username.</td><td>You must specify a password." are displayed on the screen</td></tr></table></span>
-												</div>
-												<div class="st fail">
-													<span class="tt">04.06.2021 14:24:02</span>&nbsp;
-													<span class="ts">fail</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then The system displays the messages below]</span>
-													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">java.lang.AssertionError: Invalid username expected [null] but found [You must specify a username.]
-	at org.testng.Assert.fail(Assert.java:97)
-	at org.testng.Assert.failNotEquals(Assert.java:969)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:575)
-	at stepdefinitions.LoginSteps.lambda$new$5(LoginSteps.java:48)
-	at ✽.The system displays the messages below(file:///E:/RaiwayBDD/CucumberRaiway/src/test/resources/features/Login.feature:24)
-</textarea></span>
+													<span class="td"><table class='runtime-table table-striped table'><tr><td>Form Message</td><td>User Message</td><td>Password Message</td></tr><tr><td>There was a problem with your login and/or errors exist in your form.</td><td>You must specify a username.</td><td>You must specify a password.</td></tr></table></span>
 												</div>
 											</div>
 											</div>
