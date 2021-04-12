@@ -6,7 +6,7 @@ Feature: LoginFeature
 
     Scenario Outline: Login with valid username and  password
         When I Login with username "<username>" and password "<password>"
-        Then Logout tab is displayed on the menu tab
+        Then "Logout" tab is displayed on the menu tab
         Examples:
             | username             | password  |
             | loan119044@gmail.com | 123456789 |
@@ -22,6 +22,11 @@ Feature: LoginFeature
     Scenario: Login with all blank username and password
         When Login with username "" and password ""
         Then The system displays the messages below
-            | Form Message               | User Message  | Password Message |
-            |There was a problem with your login and/or errors exist in your form.|You must specify a username.|You must specify a password.|
+            | Form Message                                                          | User Message                 | Password Message             |
+            | There was a problem with your login and/or errors exist in your form. | You must specify a username. | You must specify a password. |
+
+    Scenario: Verify that clicking on the hyperlink text "registration page" will redirect to the Register page
+        When I click on the hyperlink text "registration page"
+        Then "Register" tab is displayed on the menu tab
+
 

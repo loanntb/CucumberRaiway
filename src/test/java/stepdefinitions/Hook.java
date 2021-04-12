@@ -1,11 +1,11 @@
 package stepdefinitions;
 
-import helper.Driver;
+import drivers.DriverManager;
 import io.cucumber.java.After;
 
-public class Hook extends Driver {
+public class Hook extends DriverManager {
     @After
     public void cleanUpAll() {
-        Driver.quitWebDriver();
+        DriverManager.quitWebDriver();
     }
 }

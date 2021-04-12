@@ -1,38 +1,35 @@
-package pageobjects;
+package pages;
 
-import helper.Driver;
+import drivers.DriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasePage {
     //Locators
-    private final By emailTXT = By.id("username");
-    private final By passwordTXT = By.id("password");
-    private final By loginButton = By.cssSelector(".LoginForm input[title='Login']");
-    private final By logoutTab = By.xpath("//div[@id='menu']/ul//span[.='Log out']");
-    private final By errorMessageForm = By.cssSelector("#content .message");
+    private final static By emailTXT = By.id("username");
+    private final static By passwordTXT = By.id("password");
+    private final static By loginButton = By.cssSelector(".LoginForm input[title='Login']");
+    private final static By logoutTab = By.xpath("//div[@id='menu']/ul//span[.='Log out']");
+
 
     //Element
     private WebElement getLoginButton() {
-        return Driver.getWebDriver().findElement(loginButton);
+        return DriverManager.getWebDriver().findElement(loginButton);
     }
 
     private WebElement getEmail() {
-        return Driver.getWebDriver().findElement(emailTXT);
+        return DriverManager.getWebDriver().findElement(emailTXT);
     }
 
     private WebElement getPassword() {
-        return Driver.getWebDriver().findElement(passwordTXT);
-    }
-
-    private WebElement getErrorMessageForm() {
-        return Driver.getWebDriver().findElement(errorMessageForm);
+        return DriverManager.getWebDriver().findElement(passwordTXT);
     }
 
     private WebElement getLogoutTab() {
-        return Driver.getWebDriver().findElement(logoutTab);
+        return DriverManager.getWebDriver().findElement(logoutTab);
     }
+
 
     private void enterEmail(String email) {
         getEmail().sendKeys(email);
@@ -53,12 +50,8 @@ public class LoginPage extends BasePage {
         getLoginButton().click();
     }
 
-    public String errorFormMessage() {
-        return getText(getErrorMessageForm());
-    }
-
     /***
-     * Check ChangePassword is displayed once user logged in
+     * Check Logout is displayed once user logged in
      * @return
      */
     public Boolean isLogoutTabDisplayed() {

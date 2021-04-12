@@ -1,6 +1,6 @@
 package testrunner;
 
-import base.BaseUtil;
+import base.BaseTest;
 import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
@@ -14,7 +14,7 @@ import org.testng.annotations.DataProvider;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         }
 )
-public class LoginTest extends BaseUtil {
+public class LoginTest extends BaseTest {
     @Override
     @DataProvider(parallel = true)
     public Object[][] scenarios() {

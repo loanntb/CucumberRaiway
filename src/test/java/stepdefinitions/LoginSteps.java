@@ -4,7 +4,7 @@ import utilities.Log;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java8.En;
 import org.testng.Assert;
-import pageobjects.LoginPage;
+import pages.LoginPage;
 
 import java.util.List;
 import java.util.Map;
@@ -17,8 +17,7 @@ public class LoginSteps implements En {
             Log.info("Login with username" + username + " and password" + password);
             loginPage.login(username, password);
         });
-        Then("Logout tab is displayed on the menu tab", () -> {
-            Log.info("Check Logout Tab Displayed tab is displayed.");
+        Then("{string} tab is displayed on the menu tab", (String menuTab) -> {
             Assert.assertTrue(loginPage.isLogoutTabDisplayed());
         });
 
@@ -44,6 +43,9 @@ public class LoginSteps implements En {
                 Assert.assertEquals(loginPage.errorMessages("username"), userMessage, "Invalid username");
                 Assert.assertEquals(loginPage.errorMessages("password"), passwordMessage, "Invalid password");
             }
+        });
+        When("I click on the hyperlink text {string}", (String linkPage) -> {
+            loginPage.clickOnPageLink(linkPage);
         });
 
     }

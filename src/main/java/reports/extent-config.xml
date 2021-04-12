@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extentreports>
     <configuration>
-        <!-- report theme --> <!-- standard, dark -->
+        <!-- reports theme --> <!-- standard, dark -->
         <theme>standard</theme>
 
         <!-- document encoding -->  <!-- defaults to UTF-8 -->
@@ -11,10 +11,10 @@
         <protocol>http</protocol>
 
         <!-- title of the document -->
-        <documentTitle> Cucumber.io Framework</documentTitle>
+        <documentTitle>Selenium level 2</documentTitle>
 
-        <!-- report name - displayed at top-nav -->
-        <reportName> Cucumber Report</reportName>
+        <!-- reports name - displayed at top-nav -->
+        <reportName>Railway Report</reportName>
 
         <!-- global date format override -->  <!-- defaults to yyyy-MM-dd -->
         <dateFormat>yyyy-MM-dd</dateFormat>

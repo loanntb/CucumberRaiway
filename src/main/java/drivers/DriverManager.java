@@ -1,4 +1,4 @@
-package helper;
+package drivers;
 
 ;
 import utilities.Constant;
@@ -12,7 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class Driver {
+public class DriverManager {
 
     private static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
 
