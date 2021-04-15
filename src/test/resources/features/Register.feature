@@ -11,4 +11,3 @@ Feature: RegisterFeature
         Then The error message  "This email address is already in use." is displayed on the screen
 
 
-

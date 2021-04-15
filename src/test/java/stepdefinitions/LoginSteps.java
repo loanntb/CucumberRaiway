@@ -1,10 +1,12 @@
 package stepdefinitions;
 
+import drivers.DriverManager;
 import utilities.Log;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java8.En;
 import org.testng.Assert;
 import pages.LoginPage;
+import utilities.*;
 
 import java.util.List;
 import java.util.Map;
@@ -46,6 +48,10 @@ public class LoginSteps implements En {
         });
         When("I click on the hyperlink text {string}", (String linkPage) -> {
             loginPage.clickOnPageLink(linkPage);
+        });
+        Then("I should be on the REGISTER page", () -> {
+            String actualURL = DriverManager.getWebDriver().getCurrentUrl();
+            Assert.assertEquals(actualURL, Constant.REGISTER_URL, "Actual URL is not same expected url");
         });
 
     }

@@ -27,6 +27,6 @@ Feature: LoginFeature
 
     Scenario: Verify that clicking on the hyperlink text "registration page" will redirect to the Register page
         When I click on the hyperlink text "registration page"
-        Then "Register" tab is displayed on the menu tab
+        Then I should be on the REGISTER page
 
 
