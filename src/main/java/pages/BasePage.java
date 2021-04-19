@@ -6,10 +6,10 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
 public class BasePage {
-    private String menuTab = "//div[@id='menu']//ul/li/a/span[contains(text(), '%s')]";
-    private String errorMessage = "//div[@id='content']/form//ol/li[@class='%s']/label[@class='validation-error']";
-    private final static By errorMessageForm = By.cssSelector("#content .message");
-    private String pageLink = "//div[@id='content']/ul//li/a[contains(text(),'%s')]";
+    private final String menuTab = "//div[@id='menu']//ul/li/a/span[contains(text(), '%s')]";
+    private final String errorMessage = "//div[@id='content']/form//ol/li[@class='%s']/label[@class='validation-error']";
+    private static final By errorMessageForm = By.cssSelector("#content .message");
+    private final String pageLink = "//div[@id='content']/ul//li/a[contains(text(),'%s')]";
 
     private WebElement getMenuTab(String text) {
         return DriverManager.getWebDriver().findElement(By.xpath(String.format(menuTab, text)));

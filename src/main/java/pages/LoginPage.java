@@ -7,10 +7,10 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasePage {
     //Locators
-    private final static By emailTXT = By.id("username");
-    private final static By passwordTXT = By.id("password");
-    private final static By loginButton = By.cssSelector(".LoginForm input[title='Login']");
-    private final static By logoutTab = By.xpath("//div[@id='menu']/ul//span[.='Log out']");
+    private static final By emailTXT = By.id("username");
+    private static final By passwordTXT = By.id("password");
+    private static final By loginButton = By.cssSelector(".LoginForm input[title='Login']");
+    private static final By logoutTab = By.xpath("//div[@id='menu']/ul//span[.='Log out']");
 
 
     //Element

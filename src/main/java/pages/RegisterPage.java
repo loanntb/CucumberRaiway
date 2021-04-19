@@ -8,13 +8,13 @@ import static drivers.DriverManager.scrollToPageView;
 
 public class RegisterPage extends BasePage {
     //Locators
-    private final static By emailTXT = By.id("email");
-    private final static By passwordTXT = By.id("password");
-    private final static By confirmPasswordTXT = By.id("confirmPassword");
-    private final static By pidTXT = By.id("pid");
-    private final static By registerButton = By.cssSelector("#RegisterForm .form-actions input[title='Register']");
-    private final static By infoMessageLabel = By.cssSelector("#content p");
-    private final static By errorFormMessageLabel = By.cssSelector("#content .message");
+    private static final By emailTXT = By.id("email");
+    private static final By passwordTXT = By.id("password");
+    private static final By confirmPasswordTXT = By.id("confirmPassword");
+    private static final By pidTXT = By.id("pid");
+    private static final By registerButton = By.cssSelector("#RegisterForm .form-actions input[title='Register']");
+    private static final By infoMessageLabel = By.cssSelector("#content p");
+    private static final By errorFormMessageLabel = By.cssSelector("#content .message");
 
     //Element
 
