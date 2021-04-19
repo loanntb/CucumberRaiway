@@ -4,8 +4,6 @@
     + [Setup](#setup)
 * [Run Tests](#runtest)
 * [Test results](#testresults)
-* [CICD](#CICD)
-* [Distribute Running](#Distribute)
     ## Install
     ### Prerequisite
     Below applications are required
@@ -27,8 +25,10 @@
 ### Setting
 `Edit configuration` -> `suite` option -> `testng.xml` file -> `Apply`
 #### Run test by suite files
-For each scenario, I have a dedicated suite created for it. Just right click on it and click `Run` to execute the test.
-
+For each scenario, I have a dedicated suite created adfor it. Just right click on it and click `Run` to execute the test.
+### Parallel execution
+- In `XML suite files`, add option `parallel="classes"`
+- In `test runner files`, Edit parallel = false -> true as option @DataProvider(parallel = true)
 ### Test results
 - Cucumber Extent reports
 - HTML test results can be found at [test-output](HtmlReport/ExtenReport)  
