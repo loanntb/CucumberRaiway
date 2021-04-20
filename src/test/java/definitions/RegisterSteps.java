@@ -1,4 +1,4 @@
-package stepdefinitions;
+package definitions;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java8.En;
@@ -24,12 +24,13 @@ public class RegisterSteps implements En {
             }
 
         });
+
         Then("The information register successfully {string} message is displayed on the screen", (String message) -> {
             Assert.assertEquals(registerPage.infoSuccessfulMessage(), message, "User sign up Success");
         });
+
         Then("The error message  {string} is displayed on the screen", (String message) -> {
             Assert.assertEquals(registerPage.errorFormMessage(), message, "User cannot register new account");
         });
     }
-
 }

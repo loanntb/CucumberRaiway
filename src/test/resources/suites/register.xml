@@ -4,7 +4,7 @@
     <test name="Chrome Test" thread-count="2" parallel="classes">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="testrunner.RegisterTest"/>
+            <class name="tests.RegisterTest"/>
         </classes>
     </test>
 

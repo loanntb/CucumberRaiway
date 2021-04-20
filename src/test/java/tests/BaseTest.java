@@ -1,4 +1,4 @@
-package base;
+package tests;
 
 import drivers.DriverManager;
 import io.cucumber.testng.AbstractTestNGCucumberTests;

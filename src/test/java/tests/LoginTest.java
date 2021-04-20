@@ -1,12 +1,11 @@
-package testrunner;
+package tests;
 
-import base.BaseTest;
 import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 
 @CucumberOptions(features = {"src/test/resources/features/Login.feature"},
-        glue = {"stepdefinitions"},
+        glue = {"definitions"},
         plugin = {
                 "pretty",
                 "html:target/cucumber",
@@ -16,7 +15,7 @@ import org.testng.annotations.DataProvider;
 )
 public class LoginTest extends BaseTest {
     @Override
-    @DataProvider(parallel = false)
+    @DataProvider(parallel = true)
     public Object[][] scenarios() {
         return super.scenarios();
     }

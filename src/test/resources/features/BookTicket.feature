@@ -1,6 +1,6 @@
 Feature: Book ticket validation
 
-    Scenario: Verify that the "Ticket booked successfully!" page displays correct information
+    Scenario Outline: Verify that the "Ticket booked successfully!" page displays correct information
         Given I navigate to Raiway website
         When I click on "Login" tab
         When I Login with username "<username>" and password "<password>"

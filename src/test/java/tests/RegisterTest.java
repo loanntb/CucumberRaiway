@@ -1,12 +1,11 @@
-package testrunner;
+package tests;
 
-import base.BaseTest;
 import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 
-@CucumberOptions(features = {"src/test/resources/features/BookTicket.feature"},
-        glue = {"stepdefinitions"},
+@CucumberOptions(features = {"src/test/resources/features/Register.feature"},
+        glue = {"definitions", "stepconfig"},
         plugin = {
                 "pretty",
                 "html:target/cucumber",
@@ -14,7 +13,7 @@ import org.testng.annotations.DataProvider;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         }
 )
-public class BookTicketTest extends BaseTest {
+public class RegisterTest extends BaseTest {
     @Override
     @DataProvider(parallel = false)
     public Object[][] scenarios() {
