@@ -6,7 +6,7 @@ Feature: LoginFeature
 
     Scenario Outline: Login with valid username and  password
         When I Login with username "<username>" and password "<password>"
-        Then "Logout" tab is displayed on the menu tab
+        Then "Welcome to Safe Railway" tab is displayed on the Login Page
         Examples:
             | username             | password  |
             | loan119044@gmail.com | 123456789 |

@@ -23,7 +23,7 @@
     
 ## Run Tests
 ### Setting
-`Edit configuration` -> `suite` option -> `testng.xml` file -> `Apply`
+`Edit configuration` -> `TestNG` -> `suite` option -> `testng.xml` file -> `Apply`
 #### Run test by suite files
 For each scenario, I have a dedicated suite created adfor it. Just right click on it and click `Run` to execute the test.
 ### Parallel execution

@@ -1,7 +1,10 @@
 package controls;
 
 import drivers.DriverManager;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import utilities.Log;
 
 import java.util.List;
@@ -74,6 +77,19 @@ public class BaseControl {
         }
     }
 
+    public void click() {
+        getElement().click();
+    }
+
+    public By getLocator() {
+        return this.byLocator;
+    }
+
+    public void setDynamicValue(Object... args) {
+        this.locator = String.format(this.dynamicLocator, args);
+        this.byLocator = getByLocator();
+    }
+
     public List<WebElement> totalElements() {
         return getDriver().findElements(getLocator());
     }
@@ -92,6 +108,41 @@ public class BaseControl {
             Log.error(
                     String.format("StaleElementReferenceException '%s': %s", getLocator().toString(), e.getMessage().split("\n")[0]));
             return getElement();
+        }
+    }
+
+    public boolean isSelected() {
+        try {
+            Log.debug(String.format("Is control selected or not: %s", getLocator().toString()));
+            return getElement().isSelected();
+        } catch (Exception e) {
+            Log.error(String.format("IsSelected: Has error with control '%s': %s", getLocator().toString(),
+                    e.getMessage().split("\n")[0]));
+            return false;
+        }
+    }
+
+    public boolean isDisplayed() {
+        try {
+            Log.debug(String.format("is control displayed or not: %s", this.getLocator().toString()));
+            return this.getElement().isDisplayed();
+        } catch (Exception var2) {
+            Log.error(String.format("IsDisplayed: Has error with control '%s': %s", this.getLocator().toString(), var2.getMessage()));
+            return false;
+        }
+    }
+
+    public String getCurrentULR() {
+        return DriverManager.getWebDriver().getCurrentUrl();
+    }
+
+    public String getText() {
+        try {
+            Log.debug(String.format("Get text of element %s", getLocator().toString()));
+            return getElement().getText().trim();
+        } catch (Exception e) {
+            Log.error(String.format("Has error with control '%s': %s", getLocator().toString(), e.getMessage().split("\n")[0]));
+            throw e;
         }
     }
 }
