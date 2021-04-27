@@ -19,7 +19,6 @@
     4. Install all plugins below:
     - Cucumber for Java
     - Gherkin
-    - Lombok
     
 ## Run Tests
 ### Setting
